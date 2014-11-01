@@ -1,297 +1,424 @@
-<%= form_for(@datapoint) do |f| %>
-  <% if @datapoint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@datapoint.errors.count, "error") %> prohibited this datapoint from being saved:</h2>
-
-      <ul>
-      <% @datapoint.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @datapoint, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :titlexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :titlexpath, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :titlecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :titlecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :titleregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :titleregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :descriptionxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :descriptionxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :descriptioncss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :descriptioncss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :descriptionregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :descriptionregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagexpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imageregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imageregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagecreditxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagecreditxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagecreditcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagecreditcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imagecreditregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imagecreditregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yeildxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yeildxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yeildcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yeildcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :yeildregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :yeildregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :prepxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :prepxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :prepcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :prepcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :prepregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :prepregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cookxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cookxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cookcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cookcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cookregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :cookregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totalxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :totalxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totalcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :totalcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :totalregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :totalregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredientsxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ingredientsxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredientscss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ingredientscss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredientsregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ingredientsregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dietxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dietxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dietcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dietcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dietregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dietregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :coursexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :coursexpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :coursecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :coursecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :courseregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :courseregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :easexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :easexpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :easecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :easecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :easeregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :easeregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :categoriesxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :categoriesxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :categoriescss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :categoriescss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :categoriesregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :categoriesregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tagsxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :tagsxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tagscss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :tagscss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tagsregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :tagsregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ratingxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ratingxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ratingcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ratingcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ratingregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ratingregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :commentnumxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :commentnumxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :commentnumcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :commentnumcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :commentnumregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :commentnumregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebookxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :facebookxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebookcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :facebookcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :facebookregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :facebookregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :twitterxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :twitterxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :twittercss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :twittercss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :twitterregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :twitterregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pinxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pinxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pincss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pincss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pinregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pinregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :stumblexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :stumblexpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :stumblecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :stumblecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :stumbleregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :stumbleregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :gxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :gcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :gregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisherdatexpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :publisherdatexpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisherdatecss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :publisherdatecss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisherdateregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :publisherdateregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :authorxpath, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :authorxpath, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :authorcss, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :authorcss, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :authorregex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :authorregex, :class => 'text-field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :publisher_id %><br>
-    <%= f.text_field :publisher_id %>
-  </div>
-  <div class="field">
-    <%= f.label :titlexpath %><br>
-    <%= f.text_field :titlexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :titlecss %><br>
-    <%= f.text_field :titlecss %>
-  </div>
-  <div class="field">
-    <%= f.label :titleregex %><br>
-    <%= f.text_field :titleregex %>
-  </div>
-  <div class="field">
-    <%= f.label :descriptionxpath %><br>
-    <%= f.text_field :descriptionxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :descriptioncss %><br>
-    <%= f.text_field :descriptioncss %>
-  </div>
-  <div class="field">
-    <%= f.label :descriptionregex %><br>
-    <%= f.text_field :descriptionregex %>
-  </div>
-  <div class="field">
-    <%= f.label :imagexpath %><br>
-    <%= f.text_field :imagexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :imagecss %><br>
-    <%= f.text_field :imagecss %>
-  </div>
-  <div class="field">
-    <%= f.label :imageregex %><br>
-    <%= f.text_field :imageregex %>
-  </div>
-  <div class="field">
-    <%= f.label :imagecreditxpath %><br>
-    <%= f.text_field :imagecreditxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :imagecreditcss %><br>
-    <%= f.text_field :imagecreditcss %>
-  </div>
-  <div class="field">
-    <%= f.label :imagecreditregex %><br>
-    <%= f.text_field :imagecreditregex %>
-  </div>
-  <div class="field">
-    <%= f.label :yeildxpath %><br>
-    <%= f.text_field :yeildxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :yeildcss %><br>
-    <%= f.text_field :yeildcss %>
-  </div>
-  <div class="field">
-    <%= f.label :yeildregex %><br>
-    <%= f.text_field :yeildregex %>
-  </div>
-  <div class="field">
-    <%= f.label :prepxpath %><br>
-    <%= f.text_field :prepxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :prepcss %><br>
-    <%= f.text_field :prepcss %>
-  </div>
-  <div class="field">
-    <%= f.label :prepregex %><br>
-    <%= f.text_field :prepregex %>
-  </div>
-  <div class="field">
-    <%= f.label :cookxpath %><br>
-    <%= f.text_field :cookxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :cookcss %><br>
-    <%= f.text_field :cookcss %>
-  </div>
-  <div class="field">
-    <%= f.label :cookregex %><br>
-    <%= f.text_field :cookregex %>
-  </div>
-  <div class="field">
-    <%= f.label :totalxpath %><br>
-    <%= f.text_field :totalxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :totalcss %><br>
-    <%= f.text_field :totalcss %>
-  </div>
-  <div class="field">
-    <%= f.label :totalregex %><br>
-    <%= f.text_field :totalregex %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredientsxpath %><br>
-    <%= f.text_field :ingredientsxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredientscss %><br>
-    <%= f.text_field :ingredientscss %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredientsregex %><br>
-    <%= f.text_field :ingredientsregex %>
-  </div>
-  <div class="field">
-    <%= f.label :dietxpath %><br>
-    <%= f.text_field :dietxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :dietcss %><br>
-    <%= f.text_field :dietcss %>
-  </div>
-  <div class="field">
-    <%= f.label :dietregex %><br>
-    <%= f.text_field :dietregex %>
-  </div>
-  <div class="field">
-    <%= f.label :coursexpath %><br>
-    <%= f.text_field :coursexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :coursecss %><br>
-    <%= f.text_field :coursecss %>
-  </div>
-  <div class="field">
-    <%= f.label :courseregex %><br>
-    <%= f.text_field :courseregex %>
-  </div>
-  <div class="field">
-    <%= f.label :easexpath %><br>
-    <%= f.text_field :easexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :easecss %><br>
-    <%= f.text_field :easecss %>
-  </div>
-  <div class="field">
-    <%= f.label :easeregex %><br>
-    <%= f.text_field :easeregex %>
-  </div>
-  <div class="field">
-    <%= f.label :categoriesxpath %><br>
-    <%= f.text_field :categoriesxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :categoriescss %><br>
-    <%= f.text_field :categoriescss %>
-  </div>
-  <div class="field">
-    <%= f.label :categoriesregex %><br>
-    <%= f.text_field :categoriesregex %>
-  </div>
-  <div class="field">
-    <%= f.label :tagsxpath %><br>
-    <%= f.text_field :tagsxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :tagscss %><br>
-    <%= f.text_field :tagscss %>
-  </div>
-  <div class="field">
-    <%= f.label :tagsregex %><br>
-    <%= f.text_field :tagsregex %>
-  </div>
-  <div class="field">
-    <%= f.label :ratingxpath %><br>
-    <%= f.text_field :ratingxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :ratingcss %><br>
-    <%= f.text_field :ratingcss %>
-  </div>
-  <div class="field">
-    <%= f.label :ratingregex %><br>
-    <%= f.text_field :ratingregex %>
-  </div>
-  <div class="field">
-    <%= f.label :commentnumxpath %><br>
-    <%= f.text_field :commentnumxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :commentnumcss %><br>
-    <%= f.text_field :commentnumcss %>
-  </div>
-  <div class="field">
-    <%= f.label :commentnumregex %><br>
-    <%= f.text_field :commentnumregex %>
-  </div>
-  <div class="field">
-    <%= f.label :facebookxpath %><br>
-    <%= f.text_field :facebookxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :facebookcss %><br>
-    <%= f.text_field :facebookcss %>
-  </div>
-  <div class="field">
-    <%= f.label :facebookregex %><br>
-    <%= f.text_field :facebookregex %>
-  </div>
-  <div class="field">
-    <%= f.label :twitterxpath %><br>
-    <%= f.text_field :twitterxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :twittercss %><br>
-    <%= f.text_field :twittercss %>
-  </div>
-  <div class="field">
-    <%= f.label :twitterregex %><br>
-    <%= f.text_field :twitterregex %>
-  </div>
-  <div class="field">
-    <%= f.label :pinxpath %><br>
-    <%= f.text_field :pinxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :pincss %><br>
-    <%= f.text_field :pincss %>
-  </div>
-  <div class="field">
-    <%= f.label :pinregex %><br>
-    <%= f.text_field :pinregex %>
-  </div>
-  <div class="field">
-    <%= f.label :stumblexpath %><br>
-    <%= f.text_field :stumblexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :stumblecss %><br>
-    <%= f.text_field :stumblecss %>
-  </div>
-  <div class="field">
-    <%= f.label :stumbleregex %><br>
-    <%= f.text_field :stumbleregex %>
-  </div>
-  <div class="field">
-    <%= f.label :gxpath %><br>
-    <%= f.text_field :gxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :gcss %><br>
-    <%= f.text_field :gcss %>
-  </div>
-  <div class="field">
-    <%= f.label :gregex %><br>
-    <%= f.text_field :gregex %>
-  </div>
-  <div class="field">
-    <%= f.label :publisherdatexpath %><br>
-    <%= f.text_field :publisherdatexpath %>
-  </div>
-  <div class="field">
-    <%= f.label :publisherdatecss %><br>
-    <%= f.text_field :publisherdatecss %>
-  </div>
-  <div class="field">
-    <%= f.label :publisherdateregex %><br>
-    <%= f.text_field :publisherdateregex %>
-  </div>
-  <div class="field">
-    <%= f.label :authorxpath %><br>
-    <%= f.text_field :authorxpath %>
-  </div>
-  <div class="field">
-    <%= f.label :authorcss %><br>
-    <%= f.text_field :authorcss %>
-  </div>
-  <div class="field">
-    <%= f.label :authorregex %><br>
-    <%= f.text_field :authorregex %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  datapoints_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

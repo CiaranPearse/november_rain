@@ -1,86 +1,88 @@
-<h1>Listing datapoints</h1>
-
-<table>
+<%- model_class = Datapoint -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Datapoint %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Publisher</th>
-      <th>Titlexpath</th>
-      <th>Titlecss</th>
-      <th>Titleregex</th>
-      <th>Descriptionxpath</th>
-      <th>Descriptioncss</th>
-      <th>Descriptionregex</th>
-      <th>Imagexpath</th>
-      <th>Imagecss</th>
-      <th>Imageregex</th>
-      <th>Imagecreditxpath</th>
-      <th>Imagecreditcss</th>
-      <th>Imagecreditregex</th>
-      <th>Yeildxpath</th>
-      <th>Yeildcss</th>
-      <th>Yeildregex</th>
-      <th>Prepxpath</th>
-      <th>Prepcss</th>
-      <th>Prepregex</th>
-      <th>Cookxpath</th>
-      <th>Cookcss</th>
-      <th>Cookregex</th>
-      <th>Totalxpath</th>
-      <th>Totalcss</th>
-      <th>Totalregex</th>
-      <th>Ingredientsxpath</th>
-      <th>Ingredientscss</th>
-      <th>Ingredientsregex</th>
-      <th>Dietxpath</th>
-      <th>Dietcss</th>
-      <th>Dietregex</th>
-      <th>Coursexpath</th>
-      <th>Coursecss</th>
-      <th>Courseregex</th>
-      <th>Easexpath</th>
-      <th>Easecss</th>
-      <th>Easeregex</th>
-      <th>Categoriesxpath</th>
-      <th>Categoriescss</th>
-      <th>Categoriesregex</th>
-      <th>Tagsxpath</th>
-      <th>Tagscss</th>
-      <th>Tagsregex</th>
-      <th>Ratingxpath</th>
-      <th>Ratingcss</th>
-      <th>Ratingregex</th>
-      <th>Commentnumxpath</th>
-      <th>Commentnumcss</th>
-      <th>Commentnumregex</th>
-      <th>Facebookxpath</th>
-      <th>Facebookcss</th>
-      <th>Facebookregex</th>
-      <th>Twitterxpath</th>
-      <th>Twittercss</th>
-      <th>Twitterregex</th>
-      <th>Pinxpath</th>
-      <th>Pincss</th>
-      <th>Pinregex</th>
-      <th>Stumblexpath</th>
-      <th>Stumblecss</th>
-      <th>Stumbleregex</th>
-      <th>Gxpath</th>
-      <th>Gcss</th>
-      <th>Gregex</th>
-      <th>Publisherdatexpath</th>
-      <th>Publisherdatecss</th>
-      <th>Publisherdateregex</th>
-      <th>Authorxpath</th>
-      <th>Authorcss</th>
-      <th>Authorregex</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:titlexpath) %></th>
+      <th><%= model_class.human_attribute_name(:titlecss) %></th>
+      <th><%= model_class.human_attribute_name(:titleregex) %></th>
+      <th><%= model_class.human_attribute_name(:descriptionxpath) %></th>
+      <th><%= model_class.human_attribute_name(:descriptioncss) %></th>
+      <th><%= model_class.human_attribute_name(:descriptionregex) %></th>
+      <th><%= model_class.human_attribute_name(:imagexpath) %></th>
+      <th><%= model_class.human_attribute_name(:imagecss) %></th>
+      <th><%= model_class.human_attribute_name(:imageregex) %></th>
+      <th><%= model_class.human_attribute_name(:imagecreditxpath) %></th>
+      <th><%= model_class.human_attribute_name(:imagecreditcss) %></th>
+      <th><%= model_class.human_attribute_name(:imagecreditregex) %></th>
+      <th><%= model_class.human_attribute_name(:yeildxpath) %></th>
+      <th><%= model_class.human_attribute_name(:yeildcss) %></th>
+      <th><%= model_class.human_attribute_name(:yeildregex) %></th>
+      <th><%= model_class.human_attribute_name(:prepxpath) %></th>
+      <th><%= model_class.human_attribute_name(:prepcss) %></th>
+      <th><%= model_class.human_attribute_name(:prepregex) %></th>
+      <th><%= model_class.human_attribute_name(:cookxpath) %></th>
+      <th><%= model_class.human_attribute_name(:cookcss) %></th>
+      <th><%= model_class.human_attribute_name(:cookregex) %></th>
+      <th><%= model_class.human_attribute_name(:totalxpath) %></th>
+      <th><%= model_class.human_attribute_name(:totalcss) %></th>
+      <th><%= model_class.human_attribute_name(:totalregex) %></th>
+      <th><%= model_class.human_attribute_name(:ingredientsxpath) %></th>
+      <th><%= model_class.human_attribute_name(:ingredientscss) %></th>
+      <th><%= model_class.human_attribute_name(:ingredientsregex) %></th>
+      <th><%= model_class.human_attribute_name(:dietxpath) %></th>
+      <th><%= model_class.human_attribute_name(:dietcss) %></th>
+      <th><%= model_class.human_attribute_name(:dietregex) %></th>
+      <th><%= model_class.human_attribute_name(:coursexpath) %></th>
+      <th><%= model_class.human_attribute_name(:coursecss) %></th>
+      <th><%= model_class.human_attribute_name(:courseregex) %></th>
+      <th><%= model_class.human_attribute_name(:easexpath) %></th>
+      <th><%= model_class.human_attribute_name(:easecss) %></th>
+      <th><%= model_class.human_attribute_name(:easeregex) %></th>
+      <th><%= model_class.human_attribute_name(:categoriesxpath) %></th>
+      <th><%= model_class.human_attribute_name(:categoriescss) %></th>
+      <th><%= model_class.human_attribute_name(:categoriesregex) %></th>
+      <th><%= model_class.human_attribute_name(:tagsxpath) %></th>
+      <th><%= model_class.human_attribute_name(:tagscss) %></th>
+      <th><%= model_class.human_attribute_name(:tagsregex) %></th>
+      <th><%= model_class.human_attribute_name(:ratingxpath) %></th>
+      <th><%= model_class.human_attribute_name(:ratingcss) %></th>
+      <th><%= model_class.human_attribute_name(:ratingregex) %></th>
+      <th><%= model_class.human_attribute_name(:commentnumxpath) %></th>
+      <th><%= model_class.human_attribute_name(:commentnumcss) %></th>
+      <th><%= model_class.human_attribute_name(:commentnumregex) %></th>
+      <th><%= model_class.human_attribute_name(:facebookxpath) %></th>
+      <th><%= model_class.human_attribute_name(:facebookcss) %></th>
+      <th><%= model_class.human_attribute_name(:facebookregex) %></th>
+      <th><%= model_class.human_attribute_name(:twitterxpath) %></th>
+      <th><%= model_class.human_attribute_name(:twittercss) %></th>
+      <th><%= model_class.human_attribute_name(:twitterregex) %></th>
+      <th><%= model_class.human_attribute_name(:pinxpath) %></th>
+      <th><%= model_class.human_attribute_name(:pincss) %></th>
+      <th><%= model_class.human_attribute_name(:pinregex) %></th>
+      <th><%= model_class.human_attribute_name(:stumblexpath) %></th>
+      <th><%= model_class.human_attribute_name(:stumblecss) %></th>
+      <th><%= model_class.human_attribute_name(:stumbleregex) %></th>
+      <th><%= model_class.human_attribute_name(:gxpath) %></th>
+      <th><%= model_class.human_attribute_name(:gcss) %></th>
+      <th><%= model_class.human_attribute_name(:gregex) %></th>
+      <th><%= model_class.human_attribute_name(:publisherdatexpath) %></th>
+      <th><%= model_class.human_attribute_name(:publisherdatecss) %></th>
+      <th><%= model_class.human_attribute_name(:publisherdateregex) %></th>
+      <th><%= model_class.human_attribute_name(:authorxpath) %></th>
+      <th><%= model_class.human_attribute_name(:authorcss) %></th>
+      <th><%= model_class.human_attribute_name(:authorregex) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @datapoints.each do |datapoint| %>
       <tr>
-        <td><%= datapoint.publisher %></td>
+        <td><%= datapoint.id %></td>
         <td><%= datapoint.titlexpath %></td>
         <td><%= datapoint.titlecss %></td>
         <td><%= datapoint.titleregex %></td>
@@ -150,14 +152,21 @@
         <td><%= datapoint.authorxpath %></td>
         <td><%= datapoint.authorcss %></td>
         <td><%= datapoint.authorregex %></td>
-        <td><%= link_to 'Show', datapoint %></td>
-        <td><%= link_to 'Edit', edit_datapoint_path(datapoint) %></td>
-        <td><%= link_to 'Destroy', datapoint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l datapoint.created_at, format: :long %></td>
+        <td>
+          <%= link_to datapoint_path(datapoint), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to datapoint_path(datapoint), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Datapoint', new_datapoint_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_datapoint_path,
+            :class => 'btn btn-primary' %>

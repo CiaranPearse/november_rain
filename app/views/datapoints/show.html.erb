@@ -1,354 +1,160 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Datapoint -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Datapoint %></h1>
+</div>
+
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:titlexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.titlexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:titlecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.titlecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:titleregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.titleregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:descriptionxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.descriptionxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:descriptioncss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.descriptioncss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:descriptionregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.descriptionregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imagexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imagecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imageregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imageregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagecreditxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imagecreditxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagecreditcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imagecreditcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imagecreditregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.imagecreditregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yeildxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.yeildxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yeildcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.yeildcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:yeildregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.yeildregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:prepxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.prepxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:prepcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.prepcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:prepregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.prepregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cookxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.cookxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cookcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.cookcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:cookregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.cookregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totalxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.totalxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totalcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.totalcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:totalregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.totalregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ingredientsxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ingredientsxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ingredientscss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ingredientscss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ingredientsregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ingredientsregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dietxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.dietxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dietcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.dietcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dietregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.dietregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:coursexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.coursexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:coursecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.coursecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:courseregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.courseregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:easexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.easexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:easecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.easecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:easeregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.easeregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:categoriesxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.categoriesxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:categoriescss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.categoriescss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:categoriesregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.categoriesregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tagsxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.tagsxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tagscss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.tagscss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:tagsregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.tagsregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ratingxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ratingxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ratingcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ratingcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ratingregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.ratingregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:commentnumxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.commentnumxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:commentnumcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.commentnumcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:commentnumregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.commentnumregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:facebookxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.facebookxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:facebookcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.facebookcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:facebookregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.facebookregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:twitterxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.twitterxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:twittercss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.twittercss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:twitterregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.twitterregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pinxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.pinxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pincss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.pincss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pinregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.pinregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:stumblexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.stumblexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:stumblecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.stumblecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:stumbleregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.stumbleregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.gxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.gcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.gregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:publisherdatexpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.publisherdatexpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:publisherdatecss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.publisherdatecss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:publisherdateregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.publisherdateregex %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:authorxpath) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.authorxpath %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:authorcss) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.authorcss %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:authorregex) %></dt>
+      <dd><pre class="prettyprint"><%= @datapoint.authorregex %></pre></dd>
+  </dl>
+</div>
+
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              datapoints_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_datapoint_path(@datapoint), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              datapoint_path(@datapoint),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @datapoint.publisher %>
-</p>
-
-<p>
-  <strong>Titlexpath:</strong>
-  <%= @datapoint.titlexpath %>
-</p>
-
-<p>
-  <strong>Titlecss:</strong>
-  <%= @datapoint.titlecss %>
-</p>
-
-<p>
-  <strong>Titleregex:</strong>
-  <%= @datapoint.titleregex %>
-</p>
-
-<p>
-  <strong>Descriptionxpath:</strong>
-  <%= @datapoint.descriptionxpath %>
-</p>
-
-<p>
-  <strong>Descriptioncss:</strong>
-  <%= @datapoint.descriptioncss %>
-</p>
-
-<p>
-  <strong>Descriptionregex:</strong>
-  <%= @datapoint.descriptionregex %>
-</p>
-
-<p>
-  <strong>Imagexpath:</strong>
-  <%= @datapoint.imagexpath %>
-</p>
-
-<p>
-  <strong>Imagecss:</strong>
-  <%= @datapoint.imagecss %>
-</p>
-
-<p>
-  <strong>Imageregex:</strong>
-  <%= @datapoint.imageregex %>
-</p>
-
-<p>
-  <strong>Imagecreditxpath:</strong>
-  <%= @datapoint.imagecreditxpath %>
-</p>
-
-<p>
-  <strong>Imagecreditcss:</strong>
-  <%= @datapoint.imagecreditcss %>
-</p>
-
-<p>
-  <strong>Imagecreditregex:</strong>
-  <%= @datapoint.imagecreditregex %>
-</p>
-
-<p>
-  <strong>Yeildxpath:</strong>
-  <%= @datapoint.yeildxpath %>
-</p>
-
-<p>
-  <strong>Yeildcss:</strong>
-  <%= @datapoint.yeildcss %>
-</p>
-
-<p>
-  <strong>Yeildregex:</strong>
-  <%= @datapoint.yeildregex %>
-</p>
-
-<p>
-  <strong>Prepxpath:</strong>
-  <%= @datapoint.prepxpath %>
-</p>
-
-<p>
-  <strong>Prepcss:</strong>
-  <%= @datapoint.prepcss %>
-</p>
-
-<p>
-  <strong>Prepregex:</strong>
-  <%= @datapoint.prepregex %>
-</p>
-
-<p>
-  <strong>Cookxpath:</strong>
-  <%= @datapoint.cookxpath %>
-</p>
-
-<p>
-  <strong>Cookcss:</strong>
-  <%= @datapoint.cookcss %>
-</p>
-
-<p>
-  <strong>Cookregex:</strong>
-  <%= @datapoint.cookregex %>
-</p>
-
-<p>
-  <strong>Totalxpath:</strong>
-  <%= @datapoint.totalxpath %>
-</p>
-
-<p>
-  <strong>Totalcss:</strong>
-  <%= @datapoint.totalcss %>
-</p>
-
-<p>
-  <strong>Totalregex:</strong>
-  <%= @datapoint.totalregex %>
-</p>
-
-<p>
-  <strong>Ingredientsxpath:</strong>
-  <%= @datapoint.ingredientsxpath %>
-</p>
-
-<p>
-  <strong>Ingredientscss:</strong>
-  <%= @datapoint.ingredientscss %>
-</p>
-
-<p>
-  <strong>Ingredientsregex:</strong>
-  <%= @datapoint.ingredientsregex %>
-</p>
-
-<p>
-  <strong>Dietxpath:</strong>
-  <%= @datapoint.dietxpath %>
-</p>
-
-<p>
-  <strong>Dietcss:</strong>
-  <%= @datapoint.dietcss %>
-</p>
-
-<p>
-  <strong>Dietregex:</strong>
-  <%= @datapoint.dietregex %>
-</p>
-
-<p>
-  <strong>Coursexpath:</strong>
-  <%= @datapoint.coursexpath %>
-</p>
-
-<p>
-  <strong>Coursecss:</strong>
-  <%= @datapoint.coursecss %>
-</p>
-
-<p>
-  <strong>Courseregex:</strong>
-  <%= @datapoint.courseregex %>
-</p>
-
-<p>
-  <strong>Easexpath:</strong>
-  <%= @datapoint.easexpath %>
-</p>
-
-<p>
-  <strong>Easecss:</strong>
-  <%= @datapoint.easecss %>
-</p>
-
-<p>
-  <strong>Easeregex:</strong>
-  <%= @datapoint.easeregex %>
-</p>
-
-<p>
-  <strong>Categoriesxpath:</strong>
-  <%= @datapoint.categoriesxpath %>
-</p>
-
-<p>
-  <strong>Categoriescss:</strong>
-  <%= @datapoint.categoriescss %>
-</p>
-
-<p>
-  <strong>Categoriesregex:</strong>
-  <%= @datapoint.categoriesregex %>
-</p>
-
-<p>
-  <strong>Tagsxpath:</strong>
-  <%= @datapoint.tagsxpath %>
-</p>
-
-<p>
-  <strong>Tagscss:</strong>
-  <%= @datapoint.tagscss %>
-</p>
-
-<p>
-  <strong>Tagsregex:</strong>
-  <%= @datapoint.tagsregex %>
-</p>
-
-<p>
-  <strong>Ratingxpath:</strong>
-  <%= @datapoint.ratingxpath %>
-</p>
-
-<p>
-  <strong>Ratingcss:</strong>
-  <%= @datapoint.ratingcss %>
-</p>
-
-<p>
-  <strong>Ratingregex:</strong>
-  <%= @datapoint.ratingregex %>
-</p>
-
-<p>
-  <strong>Commentnumxpath:</strong>
-  <%= @datapoint.commentnumxpath %>
-</p>
-
-<p>
-  <strong>Commentnumcss:</strong>
-  <%= @datapoint.commentnumcss %>
-</p>
-
-<p>
-  <strong>Commentnumregex:</strong>
-  <%= @datapoint.commentnumregex %>
-</p>
-
-<p>
-  <strong>Facebookxpath:</strong>
-  <%= @datapoint.facebookxpath %>
-</p>
-
-<p>
-  <strong>Facebookcss:</strong>
-  <%= @datapoint.facebookcss %>
-</p>
-
-<p>
-  <strong>Facebookregex:</strong>
-  <%= @datapoint.facebookregex %>
-</p>
-
-<p>
-  <strong>Twitterxpath:</strong>
-  <%= @datapoint.twitterxpath %>
-</p>
-
-<p>
-  <strong>Twittercss:</strong>
-  <%= @datapoint.twittercss %>
-</p>
-
-<p>
-  <strong>Twitterregex:</strong>
-  <%= @datapoint.twitterregex %>
-</p>
-
-<p>
-  <strong>Pinxpath:</strong>
-  <%= @datapoint.pinxpath %>
-</p>
-
-<p>
-  <strong>Pincss:</strong>
-  <%= @datapoint.pincss %>
-</p>
-
-<p>
-  <strong>Pinregex:</strong>
-  <%= @datapoint.pinregex %>
-</p>
-
-<p>
-  <strong>Stumblexpath:</strong>
-  <%= @datapoint.stumblexpath %>
-</p>
-
-<p>
-  <strong>Stumblecss:</strong>
-  <%= @datapoint.stumblecss %>
-</p>
-
-<p>
-  <strong>Stumbleregex:</strong>
-  <%= @datapoint.stumbleregex %>
-</p>
-
-<p>
-  <strong>Gxpath:</strong>
-  <%= @datapoint.gxpath %>
-</p>
-
-<p>
-  <strong>Gcss:</strong>
-  <%= @datapoint.gcss %>
-</p>
-
-<p>
-  <strong>Gregex:</strong>
-  <%= @datapoint.gregex %>
-</p>
-
-<p>
-  <strong>Publisherdatexpath:</strong>
-  <%= @datapoint.publisherdatexpath %>
-</p>
-
-<p>
-  <strong>Publisherdatecss:</strong>
-  <%= @datapoint.publisherdatecss %>
-</p>
-
-<p>
-  <strong>Publisherdateregex:</strong>
-  <%= @datapoint.publisherdateregex %>
-</p>
-
-<p>
-  <strong>Authorxpath:</strong>
-  <%= @datapoint.authorxpath %>
-</p>
-
-<p>
-  <strong>Authorcss:</strong>
-  <%= @datapoint.authorcss %>
-</p>
-
-<p>
-  <strong>Authorregex:</strong>
-  <%= @datapoint.authorregex %>
-</p>
-
-<%= link_to 'Edit', edit_datapoint_path(@datapoint) %> |
-<%= link_to 'Back', datapoints_path %>
