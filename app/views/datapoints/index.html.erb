@@ -1,0 +1,163 @@
+<h1>Listing datapoints</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Publisher</th>
+      <th>Titlexpath</th>
+      <th>Titlecss</th>
+      <th>Titleregex</th>
+      <th>Descriptionxpath</th>
+      <th>Descriptioncss</th>
+      <th>Descriptionregex</th>
+      <th>Imagexpath</th>
+      <th>Imagecss</th>
+      <th>Imageregex</th>
+      <th>Imagecreditxpath</th>
+      <th>Imagecreditcss</th>
+      <th>Imagecreditregex</th>
+      <th>Yeildxpath</th>
+      <th>Yeildcss</th>
+      <th>Yeildregex</th>
+      <th>Prepxpath</th>
+      <th>Prepcss</th>
+      <th>Prepregex</th>
+      <th>Cookxpath</th>
+      <th>Cookcss</th>
+      <th>Cookregex</th>
+      <th>Totalxpath</th>
+      <th>Totalcss</th>
+      <th>Totalregex</th>
+      <th>Ingredientsxpath</th>
+      <th>Ingredientscss</th>
+      <th>Ingredientsregex</th>
+      <th>Dietxpath</th>
+      <th>Dietcss</th>
+      <th>Dietregex</th>
+      <th>Coursexpath</th>
+      <th>Coursecss</th>
+      <th>Courseregex</th>
+      <th>Easexpath</th>
+      <th>Easecss</th>
+      <th>Easeregex</th>
+      <th>Categoriesxpath</th>
+      <th>Categoriescss</th>
+      <th>Categoriesregex</th>
+      <th>Tagsxpath</th>
+      <th>Tagscss</th>
+      <th>Tagsregex</th>
+      <th>Ratingxpath</th>
+      <th>Ratingcss</th>
+      <th>Ratingregex</th>
+      <th>Commentnumxpath</th>
+      <th>Commentnumcss</th>
+      <th>Commentnumregex</th>
+      <th>Facebookxpath</th>
+      <th>Facebookcss</th>
+      <th>Facebookregex</th>
+      <th>Twitterxpath</th>
+      <th>Twittercss</th>
+      <th>Twitterregex</th>
+      <th>Pinxpath</th>
+      <th>Pincss</th>
+      <th>Pinregex</th>
+      <th>Stumblexpath</th>
+      <th>Stumblecss</th>
+      <th>Stumbleregex</th>
+      <th>Gxpath</th>
+      <th>Gcss</th>
+      <th>Gregex</th>
+      <th>Publisherdatexpath</th>
+      <th>Publisherdatecss</th>
+      <th>Publisherdateregex</th>
+      <th>Authorxpath</th>
+      <th>Authorcss</th>
+      <th>Authorregex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datapoints.each do |datapoint| %>
+      <tr>
+        <td><%= datapoint.publisher %></td>
+        <td><%= datapoint.titlexpath %></td>
+        <td><%= datapoint.titlecss %></td>
+        <td><%= datapoint.titleregex %></td>
+        <td><%= datapoint.descriptionxpath %></td>
+        <td><%= datapoint.descriptioncss %></td>
+        <td><%= datapoint.descriptionregex %></td>
+        <td><%= datapoint.imagexpath %></td>
+        <td><%= datapoint.imagecss %></td>
+        <td><%= datapoint.imageregex %></td>
+        <td><%= datapoint.imagecreditxpath %></td>
+        <td><%= datapoint.imagecreditcss %></td>
+        <td><%= datapoint.imagecreditregex %></td>
+        <td><%= datapoint.yeildxpath %></td>
+        <td><%= datapoint.yeildcss %></td>
+        <td><%= datapoint.yeildregex %></td>
+        <td><%= datapoint.prepxpath %></td>
+        <td><%= datapoint.prepcss %></td>
+        <td><%= datapoint.prepregex %></td>
+        <td><%= datapoint.cookxpath %></td>
+        <td><%= datapoint.cookcss %></td>
+        <td><%= datapoint.cookregex %></td>
+        <td><%= datapoint.totalxpath %></td>
+        <td><%= datapoint.totalcss %></td>
+        <td><%= datapoint.totalregex %></td>
+        <td><%= datapoint.ingredientsxpath %></td>
+        <td><%= datapoint.ingredientscss %></td>
+        <td><%= datapoint.ingredientsregex %></td>
+        <td><%= datapoint.dietxpath %></td>
+        <td><%= datapoint.dietcss %></td>
+        <td><%= datapoint.dietregex %></td>
+        <td><%= datapoint.coursexpath %></td>
+        <td><%= datapoint.coursecss %></td>
+        <td><%= datapoint.courseregex %></td>
+        <td><%= datapoint.easexpath %></td>
+        <td><%= datapoint.easecss %></td>
+        <td><%= datapoint.easeregex %></td>
+        <td><%= datapoint.categoriesxpath %></td>
+        <td><%= datapoint.categoriescss %></td>
+        <td><%= datapoint.categoriesregex %></td>
+        <td><%= datapoint.tagsxpath %></td>
+        <td><%= datapoint.tagscss %></td>
+        <td><%= datapoint.tagsregex %></td>
+        <td><%= datapoint.ratingxpath %></td>
+        <td><%= datapoint.ratingcss %></td>
+        <td><%= datapoint.ratingregex %></td>
+        <td><%= datapoint.commentnumxpath %></td>
+        <td><%= datapoint.commentnumcss %></td>
+        <td><%= datapoint.commentnumregex %></td>
+        <td><%= datapoint.facebookxpath %></td>
+        <td><%= datapoint.facebookcss %></td>
+        <td><%= datapoint.facebookregex %></td>
+        <td><%= datapoint.twitterxpath %></td>
+        <td><%= datapoint.twittercss %></td>
+        <td><%= datapoint.twitterregex %></td>
+        <td><%= datapoint.pinxpath %></td>
+        <td><%= datapoint.pincss %></td>
+        <td><%= datapoint.pinregex %></td>
+        <td><%= datapoint.stumblexpath %></td>
+        <td><%= datapoint.stumblecss %></td>
+        <td><%= datapoint.stumbleregex %></td>
+        <td><%= datapoint.gxpath %></td>
+        <td><%= datapoint.gcss %></td>
+        <td><%= datapoint.gregex %></td>
+        <td><%= datapoint.publisherdatexpath %></td>
+        <td><%= datapoint.publisherdatecss %></td>
+        <td><%= datapoint.publisherdateregex %></td>
+        <td><%= datapoint.authorxpath %></td>
+        <td><%= datapoint.authorcss %></td>
+        <td><%= datapoint.authorregex %></td>
+        <td><%= link_to 'Show', datapoint %></td>
+        <td><%= link_to 'Edit', edit_datapoint_path(datapoint) %></td>
+        <td><%= link_to 'Destroy', datapoint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datapoint', new_datapoint_path %>
